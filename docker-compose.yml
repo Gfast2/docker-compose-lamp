@@ -25,6 +25,7 @@ services:
     volumes: 
       - ${MYSQL_DATA_DIR-./data/mysql}:/var/lib/mysql
       - ${MYSQL_LOG_DIR-./logs/mysql}:/var/log/mysql
+      - ./tmp/mysql:/var/lib/mysql-files
     environment:
       MYSQL_ROOT_PASSWORD: tiger
       MYSQL_DATABASE: png
